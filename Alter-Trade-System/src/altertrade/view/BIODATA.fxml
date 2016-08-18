@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="575.0" prefWidth="638.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="altertrade.view.BIODATAController">
+    <stylesheets>
+        <URL value="@/altertrade/assets/css/biodata.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="612.0" prefHeight="575.0" prefWidth="638.0" styleClass="biodata-border" stylesheets="@../assets/css/biodata.css">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="menuSave" mnemonicParsing="false" onAction="#saveWorker" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save as..." />
+                        <RadioMenuItem mnemonicParsing="false" text="Print" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Update" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ScrollPane prefHeight="551.0" prefWidth="621.0">
+              <content>
+                  <AnchorPane>
+                     <children>
+                        <Pane fx:id="txtPosition" prefHeight="108.0" prefWidth="612.0">
+                           <children>
+                              <Label layoutX="35.0" layoutY="7.0" prefHeight="44.0" prefWidth="74.0" text="NAME:">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="35.0" layoutY="50.0" prefHeight="44.0" prefWidth="101.0" text="Position:">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="92.0" fitWidth="89.0" layoutX="499.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                              <TextField fx:id="txtFirstname" layoutX="109.0" layoutY="19.0" prefWidth="100.0" promptText="Firstname" />
+                              <TextField fx:id="txtMiddlename" layoutX="209.0" layoutY="19.0" prefWidth="100.0" promptText="Middlename" />
+                              <TextField fx:id="txtLastname" layoutX="309.0" layoutY="19.0" prefWidth="100.0" promptText="Lastname" />
+                              <ComboBox fx:id="comboPosition" layoutX="109.0" layoutY="59.0" prefHeight="29.0" prefWidth="197.0" />
+                           </children>
+                        </Pane>
+                        <Separator layoutY="108.0" prefHeight="2.0" prefWidth="612.0" />
+                        <Pane layoutY="116.0" prefHeight="268.0" prefWidth="612.0">
+                           <children>
+                              <Label layoutX="35.0" prefHeight="44.0" prefWidth="147.0" text="Position Information">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="285.0" layoutY="44.0" prefHeight="44.0" prefWidth="60.0" text="Gender:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="35.0" layoutY="78.0" prefHeight="44.0" prefWidth="74.0" text="Address:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="35.0" layoutY="44.0" prefHeight="44.0" prefWidth="30.0" text="Age:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="34.0" layoutY="171.0" prefHeight="44.0" prefWidth="101.0" text="Contact Number:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="34.0" layoutY="202.0" prefHeight="44.0" prefWidth="101.0" text="Email Address:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtAge" layoutX="72.0" layoutY="57.0" prefHeight="19.0" prefWidth="74.0" />
+                              <TextField fx:id="txtBarangay" layoutX="165.0" layoutY="120.0" prefHeight="29.0" prefWidth="165.0" />
+                              <TextField fx:id="txtContactNumber" layoutX="148.0" layoutY="184.0" prefHeight="21.0" prefWidth="182.0" />
+                              <TextField fx:id="txtEmailAddress" layoutX="148.0" layoutY="215.0" prefHeight="21.0" prefWidth="182.0" />
+                              <ComboBox fx:id="comboCity" layoutX="339.0" layoutY="120.0" onMouseReleased="#setProvince" prefHeight="29.0" prefWidth="129.0" />
+                              <ComboBox fx:id="comboProvince" layoutX="468.0" layoutY="120.0" prefHeight="29.0" prefWidth="129.0" />
+                              <TextField fx:id="txtStreet" layoutX="16.0" layoutY="120.0" prefHeight="29.0" prefWidth="147.0" />
+                              <Label layoutX="51.0" layoutY="154.0" text="street">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="225.0" layoutY="154.0" text="barangay">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="374.0" layoutY="154.0" text="city">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="504.0" layoutY="154.0" text="province">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="comboGender" layoutX="339.0" layoutY="52.0" prefHeight="29.0" prefWidth="101.0" />
+                           </children>
+                        </Pane>
+                        <Separator layoutY="384.0" prefHeight="2.0" prefWidth="612.0" />
+                        <Pane layoutY="392.0" prefHeight="325.0" prefWidth="612.0">
+                           <children>
+                              <Label layoutX="33.0" layoutY="14.0" prefHeight="44.0" prefWidth="175.0" text="Educational Attainment">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="48.0" prefHeight="44.0" prefWidth="101.0" text="Name of school">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="278.0" layoutY="48.0" prefHeight="44.0" prefWidth="101.0" text="Place of school">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="462.0" layoutY="48.0" prefHeight="44.0" prefWidth="101.0" text="Year Graduated">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtElementary" layoutX="45.0" layoutY="109.0" prefHeight="19.0" prefWidth="175.0" promptText="Elementary" />
+                              <TextField fx:id="txtElementaryPlace" layoutX="241.0" layoutY="109.0" prefHeight="19.0" prefWidth="175.0" />
+                              <TextField fx:id="txtElementaryGraduate" layoutX="425.0" layoutY="109.0" prefHeight="19.0" prefWidth="175.0" />
+                              <TextField fx:id="txtHighschool" layoutX="45.0" layoutY="137.0" prefHeight="19.0" prefWidth="175.0" promptText="Highschool" />
+                              <TextField fx:id="txtCollege" layoutX="45.0" layoutY="164.0" prefHeight="19.0" prefWidth="175.0" promptText="College" />
+                              <TextField fx:id="txtHighSchoolPlace" layoutX="241.0" layoutY="137.0" prefHeight="19.0" prefWidth="175.0" />
+                              <TextField fx:id="txtHighschoolGraduate" layoutX="425.0" layoutY="137.0" prefHeight="19.0" prefWidth="175.0" />
+                              <TextField fx:id="txtCollegePlace" layoutX="241.0" layoutY="164.0" prefHeight="19.0" prefWidth="175.0" />
+                              <TextField fx:id="txtCollegeGraduate" layoutX="425.0" layoutY="164.0" prefHeight="19.0" prefWidth="175.0" />
+                              <Label layoutX="50.0" layoutY="185.0" prefHeight="44.0" prefWidth="101.0" text="Undergraduate:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="258.0" prefHeight="44.0" prefWidth="101.0" text="Vocational:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="txtUndergraduate" layoutX="121.0" layoutY="217.0" prefHeight="38.0" prefWidth="401.0" wrapText="true" />
+                              <TextArea fx:id="txtVocational" layoutX="121.0" layoutY="269.0" prefHeight="38.0" prefWidth="401.0" wrapText="true" />
+                           </children>
+                        </Pane>
+                        <Separator layoutY="717.0" prefWidth="200.0" />
+                        <Pane layoutY="725.0" prefHeight="193.0" prefWidth="612.0">
+                           <children>
+                              <Label layoutX="57.0" layoutY="14.0" prefHeight="44.0" prefWidth="74.0" text="Skills">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtFirstSkill" layoutX="116.0" layoutY="36.0" prefHeight="19.0" prefWidth="401.0" />
+                              <TextField fx:id="txtSecondSkill" layoutX="116.0" layoutY="69.0" prefHeight="21.0" prefWidth="401.0" />
+                              <TextField fx:id="txtThirdSkill" layoutX="116.0" layoutY="101.0" prefHeight="19.0" prefWidth="401.0" />
+                              <TextField fx:id="txtFourthSkill" layoutX="116.0" layoutY="137.0" prefHeight="19.0" prefWidth="401.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

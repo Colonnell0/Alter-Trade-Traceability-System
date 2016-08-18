@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane stylesheets="@../assets/css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="altertrade.Controller">
+   <children>
+      <HBox layoutY="25.0" prefHeight="625.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="sidebar" maxWidth="250.0" minWidth="250.0" prefHeight="675.0" prefWidth="250.0" styleClass="left-banner">
+               <children>
+                  <Button fx:id="btnHome" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="350.0" mnemonicParsing="false" onAction="#Home" prefHeight="55.0" prefWidth="250.0" text="HOME     ">
+                     <styleClass>
+                        <String fx:value="button-menu" />
+                        <String fx:value="setIconHome" />
+                     </styleClass></Button>
+                  <Button fx:id="btnLogin" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-1.0" layoutY="460.0" mnemonicParsing="false" onMouseClicked="#Login" prefHeight="55.0" prefWidth="250.0" text="LOGIN    ">
+                     <styleClass>
+                        <String fx:value="button-menu" />
+                        <String fx:value="setIconUser" />
+                     </styleClass></Button>
+                  <Button fx:id="btnAdminSettings" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="515.0" mnemonicParsing="false" onAction="#AdminSettings" prefHeight="55.0" prefWidth="250.0" text="SETTINGS">
+                     <styleClass>
+                        <String fx:value="button-menu" />
+                        <String fx:value="setIconSetting" />
+                     </styleClass></Button>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="75.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/icon/white_company_logo.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <Label layoutX="59.0" layoutY="162.0" text="ALTER " textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="124.0" layoutY="162.0" text="TRADE" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="-10.0" layoutY="253.0" prefHeight="7.0" prefWidth="270.0" rotate="16.7" style="-fx-background-color: white;" />
+                  <Pane layoutX="-9.0" layoutY="263.0" prefHeight="7.0" prefWidth="267.0" rotate="16.7" style="-fx-background-color: white;" />
+                  <Label layoutX="53.0" layoutY="183.0" text="T R A C E A B I L I T Y   S Y S T E M" textFill="#eeeded">
+                     <font>
+                        <Font name="Corbel Bold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnLogin1" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="570.0" mnemonicParsing="false" onMouseClicked="#Login" prefHeight="55.0" prefWidth="250.0" text="CONTACT ">
+                     <styleClass>
+                        <String fx:value="button-menu" />
+                        <String fx:value="setIconContact" />
+                     </styleClass></Button>
+                  <Button fx:id="btnLogin2" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-1.0" layoutY="405.0" mnemonicParsing="false" onMouseClicked="#Login" prefHeight="55.0" prefWidth="250.0" text="ABOUT  ">
+                     <styleClass>
+                        <String fx:value="button-menu" />
+                        <String fx:value="setIconAbout" />
+                     </styleClass></Button>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="scenePane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0" />
+      <Pane layoutX="807.0" layoutY="14.0" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" styleClass="right-banner" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane layoutX="890.0" layoutY="10.0" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" styleClass="right-banner" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

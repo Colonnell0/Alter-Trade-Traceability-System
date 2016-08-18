@@ -1,0 +1,172 @@
+.mainFxmlClass{
+    -fx-font-size: 10;
+    -fx-background-color: #ffffff;
+}
+
+.view-details {
+   -fx-background-color: #4bc399;
+   -fx-width: 300px;
+}
+
+.view-details:hover {
+   -fx-background-color: #ffffff;
+   -fx-text-fill: #4bc399;
+}
+
+.search-button:hover{
+    -fx-background-color: white;
+    -fx-text-fill: #4bc399;
+}
+
+.search-button{
+    -fx-background-color: #4bc399;
+    -fx-text-fill: #ffffff;
+}
+
+.button-close{
+    -fx-background-color: firebrick;
+    -fx-background-radius: 5em;
+    -fx-min-width: 18px;
+    -fx-min-height: 18px;
+    -fx-max-width: 18px;
+    -fx-max-height: 18px;
+}
+.button-minimize{
+  -fx-background-color: yellow;
+    -fx-background-radius: 5em;
+    -fx-min-width: 18px;
+    -fx-min-height: 18px;
+    -fx-max-width: 18px;
+    -fx-max-height: 18px;
+}
+.button-menu {
+    -fx-padding: 5 22 5 22;   
+    -fx-background-color: #4bc399;
+    -fx-font-family: "Arial Bold";
+    -fx-font-size:  12pt;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 0px;
+    -fx-transition: 1s;
+
+}
+.button-menu:hover{
+    -fx-background-color:#3fba91;
+    -fx-font-size: 13pt;
+}
+
+.worker{
+    -fx-background-color: #4bc399;
+}
+
+.right-banner{
+    -fx-background-color: #4bc399;
+}
+.left-banner{
+    -fx-background-color: #4bc399;
+}
+
+.information-display{
+ -fx-border-width: 0px, 0px, 2px, 0px; 
+ -fx-border-color: black;
+}
+
+.table-view{
+    -fx-control-inner-background: white;
+    -fx-background-color: white;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-text-fill:black;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color:white;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+   
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.setIconHome{
+    -fx-graphic: url("/altertrade/assets/images/icon/home.png");
+}
+
+.setIconAbout{
+    -fx-graphic: url("/altertrade/assets/images/icon/about.png");
+}
+
+.setIconUser{
+    -fx-graphic: url("/altertrade/assets/images/icon/user.png");
+}
+
+.setIconContact{
+    -fx-graphic: url("/altertrade/assets/images/icon/contacts.png");
+}
+
+.setIconSetting{
+    -fx-graphic: url("/altertrade/assets/images/icon/settings.png");
+}
+
+.setIconHome:hover{
+    -fx-graphic: url("/altertrade/assets/images/icon/home_hover.png");
+}
+
+.setIconAbout:hover{
+    -fx-graphic: url("/altertrade/assets/images/icon/about_hover.png");
+}
+
+.setIconUser:hover{
+    -fx-graphic: url("/altertrade/assets/images/icon/user_hover.png");
+}
+
+.setIconContact:hover{
+    -fx-graphic: url("/altertrade/assets/images/icon/contacts_hover.png");
+}
+
+.setIconSetting:hover{
+    -fx-graphic: url("/altertrade/assets/images/icon/settings_hover.png");
+}
+
+.setIconSupplier{
+    -fx-graphic: url("/altertrade/assets/images/icon/supplier_male.png");
+}
+
+.setIconWorker{
+    -fx-graphic: url("/altertrade/assets/images/icon/workers_male.png");
+}
+
+.set_view_details{
+     -fx-graphic: url("/altertrade/assets/images/icon/details.png");
+}
+
+.set_view_details:hover{
+     -fx-graphic: url("/altertrade/assets/images/icon/details_hover.png");
+}
